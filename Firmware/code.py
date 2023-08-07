@@ -39,7 +39,7 @@ keyboard.debug_enabled = False
 # MACROS ROW 1
 # I left it that way as I didn't know exactly what to assign to the 12 keys. You can shortcut this part as you want.
 # In the music function, enter your own youtube playlist link in the send string part
-#
+#If you want to write different things, you can adjust it according to you from the link in the key.py file or from the codes there.
 
 MUSIC = simple_key_sequence([KC.LCMD(KC.LALT(KC.LSFT(KC.T))), KC.MACRO_SLEEP_MS(1000), KC.LCTRL(KC.U), send_string(''), KC.ENTER])
 SPOTIFY = simple_key_sequence([KC.LCMD(KC.SPACE), send_string('spotify'), KC.ENTER ,KC.MACRO_SLEEP_MS(1000), KC.SPACE])

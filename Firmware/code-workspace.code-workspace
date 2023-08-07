@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../../../Desktop/Pyhton"
+		},
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../kmk_firmware-master"
+		}
+	],
+	"settings": {}
+}

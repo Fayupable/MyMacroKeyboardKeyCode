@@ -37,7 +37,11 @@ keyboard.extensions.append(midi_ext)
 keyboard.debug_enabled = False
 
 # MACROS ROW 1
-MUSIC = simple_key_sequence([KC.LCMD(KC.LALT(KC.LSFT(KC.T))), KC.MACRO_SLEEP_MS(1000), KC.LCTRL(KC.U), send_string('https://music.youtube.com/playlist?list=LM'), KC.ENTER])
+# I left it that way as I didn't know exactly what to assign to the 12 keys. You can shortcut this part as you want.
+# In the music function, enter your own youtube playlist link in the send string part
+#
+
+MUSIC = simple_key_sequence([KC.LCMD(KC.LALT(KC.LSFT(KC.T))), KC.MACRO_SLEEP_MS(1000), KC.LCTRL(KC.U), send_string(''), KC.ENTER])
 SPOTIFY = simple_key_sequence([KC.LCMD(KC.SPACE), send_string('spotify'), KC.ENTER ,KC.MACRO_SLEEP_MS(1000), KC.SPACE])
 WHATSAPP = simple_key_sequence([KC.LCMD(KC.LALT(KC.LSFT(KC.T))), KC.MACRO_SLEEP_MS(1000), KC.LCTRL(KC.U), send_string('https://web.whatsapp.com'), KC.ENTER])
 COPY = simple_key_sequence([KC.LCMD(KC.C)])
@@ -48,6 +52,9 @@ PRIVATE_BROWSING = simple_key_sequence([KC.LCMD(KC.LSFT(KC.N)),KC.MACRO_SLEEP_MS
 
 
 
+
+#In this part, I wrote to check if there is an error in my resistor soldering.
+#If you are going to use and do this, I recommend that you touch the two conductors to the part where the switches are at least once and check before soldering the switches. Thanks to this, I realized that there was a mistake in the 10th part, I took it out and soldered it again with another resistor.
 
 
 BIR = simple_key_sequence([KC.LCMD(KC.LALT(KC.LSFT(KC.T))), KC.MACRO_SLEEP_MS(1000), KC.LCTRL(KC.U), send_string('1'), KC.ENTER])
@@ -100,6 +107,7 @@ keyboard.keymap = [
         KC.MIDI(60),    KC.MIDI(61),      KC.MIDI(62),       KC.MIDI(63),  
     ]
 ]
+#In this part, the right encoder does not work very well, instead of advancing the song, it directly passes the song, so you can code what you want in that part. I'll fix that part in my library in my spare time, but I don't know when I'll get it done and enter it as an update.
 
 encoders.map = [    ((KC.VOLD, KC.VOLU, KC.MUTE),         (KC.MRWD, KC.MFFD, KC.MUTE) ), #(KC.RGB_VAD,    KC.RGB_VAI,     KC.RGB_TOG)),   # MACROS
                     ((KC.RGB_AND, KC.RGB_ANI, xxxxxxx),  (KC.RGB_AND, KC.RGB_ANI, xxxxxxx)),   #(KC.RGB_HUD,    KC.RGB_HUI,     _______   )),   # RGB CTL

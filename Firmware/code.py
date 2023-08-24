@@ -47,8 +47,12 @@ WHATSAPP = simple_key_sequence([KC.LCMD(KC.LALT(KC.LSFT(KC.T))), KC.MACRO_SLEEP_
 COPY = simple_key_sequence([KC.LCMD(KC.C)])
 PASTE = simple_key_sequence([KC.LCMD(KC.V),KC.MACRO_SLEEP_MS(500)])
 UNDO = simple_key_sequence([KC.LCMD(KC.Z),KC.MACRO_SLEEP_MS(1000)])
-FORMAT_CODE = simple_key_sequence([KC.LCMD(KC.LSFT(KC.LALT(KC.F))),KC.MACRO_SLEEP_MS(1000)])
+FORMAT_CODE = simple_key_sequence([(KC.LSFT(KC.LALT(KC.F))),KC.MACRO_SLEEP_MS(500)])
 PRIVATE_BROWSING = simple_key_sequence([KC.LCMD(KC.LSFT(KC.N)),KC.MACRO_SLEEP_MS(1000)])
+CHAT_GPT = simple_key_sequence([KC.LCMD(KC.SPACE), send_string('microsoft edge'), KC.ENTER ,KC.LCMD(KC.LALT(KC.LSFT(KC.T))), KC.MACRO_SLEEP_MS(500), KC.LCMD(KC.T), send_string('https://chat.openai.com/'), KC.ENTER])
+CREATE_DIV_REACT = simple_key_sequence([send_string('<div>\n\n</div>'),KC.LCMD(KC.LSFT(KC.LALT(KC.F))),KC.MACRO_SLEEP_MS(500)])
+CREATE_HTML_HEAD_BODY = simple_key_sequence([send_string('<html>\n<head>\n\n</head>\n\n<body>\n\n</body>\n\n</html>'),KC.LCMD(KC.LSFT(KC.LALT(KC.F))),KC.MACRO_SLEEP_MS(500)])
+
 
 
 
@@ -90,9 +94,9 @@ MIDI_OUT = KC.TD(KC.MIDI(70), xxxxxxx, xxxxxxx, KC.TO(0))
 keyboard.keymap = [
     # MACROS
     [
-        MUSIC ,       SPOTIFY,            WHATSAPP,             COPY,
-        PASTE,        UNDO,           FORMAT_CODE,           PRIVATE_BROWSING,
-         DOKUZ,    ON,       ONBIR,     ONIKI,
+        MUSIC ,       SPOTIFY,            WHATSAPP,             CHAT_GPT,
+        PRIVATE_BROWSING,        COPY,           PASTE,           UNDO,
+         FORMAT_CODE,    CREATE_HTML_HEAD_BODY,       CREATE_DIV_REACT,     ONIKI,
     ],
     # RGB CTL
     [

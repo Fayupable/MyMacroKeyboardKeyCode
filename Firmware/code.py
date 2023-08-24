@@ -90,7 +90,7 @@ MIDI_OUT = KC.TD(KC.MIDI(70), xxxxxxx, xxxxxxx, KC.TO(0))
 # midi_notes = [60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75]
 
 # KEYMAPS
-
+#To assign the shortcuts you created at the top to the key you want here, just write them in the want to section in the matrix.
 keyboard.keymap = [
     # MACROS
     [
